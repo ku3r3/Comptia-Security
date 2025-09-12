@@ -1,0 +1,53 @@
+1. download docker lalu install docker
+2. masuk ke bagian terminal pada docker terletak dibagian bawah kanan
+3. lalu download wazuh dengan perintah
+	git clone https://github.com/wazuh/wazuh-docker.git -b v4.11.2
+4. selanjutnya masuk k folder wazuh dengan perintah:
+	cd wazuh-docker/single-node
+5. selanjutnya install wazuh-manager nya dengan perintah:
+	docker-compose up 
+generate cert yml
+	nano generate-indexer-certs.yml 
+	ubah cert nya menjadi:
+	# Wazuh App Copyright (C) 2017, Wazuh Inc. (License GPLv2)
+	services:
+	  generator:
+	    image: wazuh/wazuh-certs-generator:0.0.2
+	    hostname: wazuh-certs-generator
+	    volumes:
+	      - ./config/wazuh_indexer_ssl_certs/:/certificates/
+	      - ./config/certs.yml:/config/certs.yml
+	    environment:
+	      - HTTP_PROXY=127.0.0.1
+      
+untuk simpan ctrl+x nanti pilih yes
+selanjutnya untuk verifikasi cert
+	docker compose -f generate-indexer-certs.yml run --rm generator
+jika sudah kembali k poin 5 yaitu
+	docker-compose up -d
+untuk login ke wazuh step by stepnya
+	sudo tar -O -xvf wazuh-install-files.tar
+	cd wazuh-install-files
+	cat wazuh-password.txt
+kalau tidak terdownload kembali si wazuh-install-files.tar maka kita download ulang dengan perintah
+	curl -so wazuh-passwords-tool.sh https://packages.wazuh.com/4.12/wazuh-passwords-tool.sh
+
+selanjutnya jalankan perintah ini untuk generate file tool.sh nya
+	bash wazuh-passwords-tool.sh -u admin -p Secr3tP4ssw*rd
+
+Output:	INFO: Generating password hash
+	WARNING: Password changed. Remember to update the password in the Wazuh dashboard and Filebeat nodes if necessary, and restart the services.
+nano /var/ossec/etc/ossec.conf
+	<indexer>
+  		<enabled>yes</enabled>
+  			<hosts>
+   		 <host>https://0.0.0.0:9200</host>
+ 		 </hosts>
+		  <ssl>
+ 		   <certificate_authorities>
+      <ca>/etc/filebeat/certs/root-ca.pem</ca>
+    </certificate_authorities>
+    <certificate>/etc/filebeat/certs/filebeat.pem</certificate>
+    <key>/etc/filebeat/certs/filebeat-key.pem</key>
+  </ssl>
+</indexer>
