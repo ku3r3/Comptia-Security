@@ -16,6 +16,18 @@ echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | sudo tee /etc/apt/s
 sudo apt update
 sudo apt install wazuh-manager
 
+# Unduh agent Wazuh client untuk Debian 7 (32/64 bit)
+# Ganti [VERSION] dengan versi Wazuh Manager-mu (misal: 4.7.0)
+wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.0-1_amd64.deb
+
+# Instal
+sudo dpkg -i wazuh-agent_4.7.0-1_amd64.deb
+
+# Konfigurasi ke manager (ganti IP_MANAGER)
+sudo sed -i 's/MANAGER_IP/192.168.1.100/' /var/ossec/etc/ossec.conf
+
+# Mulai agent
+sudo /var/ossec/bin/ossec-control start
 -------------------------------------------------------------------------------------------------------------
 1. download docker lalu install docker
 2. masuk ke bagian terminal pada docker terletak dibagian bawah kanan
