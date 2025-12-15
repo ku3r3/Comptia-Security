@@ -6,6 +6,17 @@ Install wazuh lewat linux
 lebih lengkapnya ada di link ini 
 https://www.awanservers.com/cara-menginstall-wazuh-siem-di-ubuntu-server/
 
+install wazuh untuk debian 7: 
+# Unduh kunci GPG
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
+
+# Tambahkan repositori (versi 3.x)
+echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+
+sudo apt update
+sudo apt install wazuh-manager
+
+-------------------------------------------------------------------------------------------------------------
 1. download docker lalu install docker
 2. masuk ke bagian terminal pada docker terletak dibagian bawah kanan
 3. lalu download wazuh dengan perintah
