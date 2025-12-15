@@ -1,3 +1,11 @@
+Install wazuh lewat linux
+1. curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+
+2. sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+3. buka browser alamat ip dan port wazuhnya
+lebih lengkapnya ada di link ini 
+https://www.awanservers.com/cara-menginstall-wazuh-siem-di-ubuntu-server/
+
 1. download docker lalu install docker
 2. masuk ke bagian terminal pada docker terletak dibagian bawah kanan
 3. lalu download wazuh dengan perintah
