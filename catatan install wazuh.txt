@@ -21,6 +21,15 @@ sudo apt install wazuh-manager
 wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.0-1_amd64.deb
 wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.0-1_i386.deb
 
+# Unduh OSSEC 3.6.0 (mendukung i386)
+wget https://github.com/ossec/ossec-hids/archive/3.6.0.tar.gz
+tar -xzf 3.6.0.tar.gz
+cd ossec-hids-3.6.0
+sudo ./install.sh
+
+sudo sed -i 's/MANAGER_IP/141.11.160.238/' /var/ossec/etc/ossec.conf
+
+
 # Instal
 sudo dpkg -i wazuh-agent_4.7.0-1_amd64.deb
 
