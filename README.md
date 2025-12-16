@@ -9,6 +9,7 @@ https://forms.gle/MM8hd6PcPzCpeUtJ7 <br />
 
 Latihan Pretest Cyber Security <br >
 https://forms.gle/LprSoTigMKnEM5fD8 <br >
+https://forms.gle/WYXxuyGuMkktxKE78 <br >
                                                                                               
 Install Wazuh step-by-step:<br />
 curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add - <br />
