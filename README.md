@@ -6,6 +6,8 @@ Untuk Konfigurasi Firewall with Cisco bisa di Download di sini <br />
 https://docs.google.com/document/d/1bcWAtkh0b9TlZ9VD85GH-SuTSU3VEja9hvECttSmBkk/edit?usp=sharing <br />
 Latihan Soal Auditor Keamanan <br >
 https://forms.gle/MM8hd6PcPzCpeUtJ7 <br />
+PPT Pengelolaan keamanan Test<br >
+https://docs.google.com/presentation/d/1WrmzVxHJlfcWg9O0NQLdVh8MBsdJTM-Rw2mrGxFOlJ8/edit?usp=sharing <br >
 
 Latihan Pretest Cyber Security <br >
 https://forms.gle/LprSoTigMKnEM5fD8 <br >
