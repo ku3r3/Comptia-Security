@@ -8,7 +8,8 @@ Latihan Soal Auditor Keamanan <br >
 https://forms.gle/MM8hd6PcPzCpeUtJ7 <br />
 PPT Pengelolaan keamanan Test<br >
 https://docs.google.com/presentation/d/1WrmzVxHJlfcWg9O0NQLdVh8MBsdJTM-Rw2mrGxFOlJ8/edit?usp=sharing <br >
-
+PPT Cyber Security Foundation<br >
+https://docs.google.com/presentation/d/1YxZhjWVYM2L-e70fSBtXU6u-yeT8hj_nuclDfIGlUDw/edit?usp=sharing <br >
 Latihan Pretest Cyber Security <br >
 https://forms.gle/LprSoTigMKnEM5fD8 <br >
 https://forms.gle/WYXxuyGuMkktxKE78 <br >
